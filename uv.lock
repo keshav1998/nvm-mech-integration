@@ -1,0 +1,35 @@
+version = 1
+requires-python = ">=3.11"
+
+[[package]]
+name = "javascript"
+version = "1!1.2.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ed/a7/0f99f9380d821205e0b8236e0b56b08dc16feaef83a63462a1ca55a15277/javascript-1!1.2.2.tar.gz", hash = "sha256:a21f403c59683fa486bf166944c9bd7a545a5f4fcbc88ca6ed96ed9d61fb10b8", size = 38206 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/06/a8/ff975cac5826bf987c97812fda1227257e70b4ddddf2aaca62bd5c1e7eec/javascript-1!1.2.2-py3-none-any.whl", hash = "sha256:6efbe8f481bdfd1d4aa7d3e5c412cad75db0f436b90f0587bbe20a2adb553957", size = 34352 },
+]
+
+[[package]]
+name = "nodeenv"
+version = "1.9.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/43/16/fc88b08840de0e0a72a2f9d8c6bae36be573e475a6326ae854bcc549fc45/nodeenv-1.9.1.tar.gz", hash = "sha256:6ec12890a2dab7946721edbfbcd91f3319c6ccc9aec47be7c7e6b7011ee6645f", size = 47437 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/1d/1b658dbd2b9fa9c4c9f32accbfc0205d532c8c6194dc0f2a4c0428e7128a/nodeenv-1.9.1-py2.py3-none-any.whl", hash = "sha256:ba11c9782d29c27c70ffbdda2d7415098754709be8a7056d79a737cd901155c9", size = 22314 },
+]
+
+[[package]]
+name = "nvm-mech-integration"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "javascript" },
+    { name = "nodeenv" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "javascript", specifier = ">=1!1.2.2" },
+    { name = "nodeenv", specifier = ">=1.9.1" },
+]
